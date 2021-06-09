@@ -1,25 +1,28 @@
-package Exercicio3While;
+package Exercicio2Condicional;
 
 import java.util.Scanner;
 
-public class Ex1 {
+
+
+public class Ex1 {/* Fazer um programa para ler um número inteiro, e depois dizer se este 
+                     número é negativo ou não.  */
+                                         
 
 	public static void main(String[] args) {
-		int senha = 0;
+
+		int num = 0;
 
 		Scanner sc = new Scanner(System.in);
-	System.out.println("Informe a senha: ");
-		senha = sc.nextInt();
-		
-		while (senha != 2002) {
-			System.out.println("Senha Inválida!");
-			System.out.println("Informe a senha: ");
-			senha = sc.nextInt();
+		System.out.println("Entre com um número: ");
+		num = sc.nextInt();
+
+		if (num < 0) {
+			System.out.println("O número " + num + " é NEGATIVO");
+		} else {
+			System.out.println("O número " + num + " não é NEGATIVO");
 		}
-		
-		System.out.println("Acesso Permitido!");
-		
 		sc.close();
+
 	}
 
 }

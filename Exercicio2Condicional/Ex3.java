@@ -1,42 +1,30 @@
-package Exercicio3While;
+package Exercicio2Condicional;
 
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex3 {/* Leia 2 valores inteiros (A e B). Após, o programa deve mostrar uma mensagem
+                     "Sao Multiplos" ou "Nao sao Multiplos", indicando se os valores lidos 
+                      são múltiplos entre si. Atenção: os números devem poder ser digitados em 
+                      ordem crescente ou decrescente. */
 
 	public static void main(String[] args) {
-		int cod = 0;
-		int qntAlc = 0, qntGas = 0, qntDies = 0;
+		int a, b;
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner (System.in);
 		
-		System.out.println("Infome o código do combustível: ");
-		cod = sc.nextInt();
+		System.out.println("Digite o primeiro número");
+		a = sc.nextInt();
 		
-		while (cod != 4) {
-			if (cod == 1) {
-				qntAlc += 1;
-			}
-			else if (cod == 2) {
-				qntGas += 1;
-			}
-			else if (cod == 3) {
-				qntDies += 1;
-			}
-			else if (cod > 4) {
-				System.out.println("Infome um código válido de 1 à 4: ");
-			}
-			System.out.println("Infome o código do combustível: ");
-			cod = sc.nextInt();
+		System.out.println("Digite o sugundo número");
+		b = sc.nextInt();
+		
+		if (a % b == 0 || b % a == 0) {
+			System.out.println("São multiplos");
 		}
-		System.out.println("MUITO OBRIGADO");
-		System.out.println("Álcool: " + qntAlc);
-		System.out.println("Gasolina: " + qntGas);
-		System.out.println("Diesel: " + qntDies);
-		
-		
+		else {
+			System.out.println("Não são multiplos");
+		}
 		sc.close();
-
 	}
 
 }
