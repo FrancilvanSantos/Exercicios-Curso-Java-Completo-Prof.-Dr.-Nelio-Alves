@@ -1,26 +1,40 @@
-package Exercicio2Condicional;
+package Exercicio3While;
 
 import java.util.Scanner;
 
-public class Ex2 {/*Fazer um programa para ler um número inteiro e dizer 
-                    se este número é par ou ímpar.*/ 
-
+public class Ex2 {
 	public static void main(String[] args) {
 
-		int num = 0;
-		
 		Scanner sc = new Scanner(System.in);
+		System.out.println("Informe a coordenada X: ");
+		int x = sc.nextInt();
+		System.out.println("Informe a coordenada Y: ");
+		int y = sc.nextInt();
 		
-		System.out.println("Entre com um número ");
-		num = sc.nextInt();
+		while (x != 0 && y != 0) {
+			
+			if (x > 0 && y > 0) {
+				System.out.println("primeiro\n");
+			}
+			else if (x < 0 && y > 0) {
+				System.out.println("segundo");
+			}
+			else if (x < 0 && y < 0) {
+				System.out.println("terceiro");
+			}
+			else {
+				System.out.println("quarto");
+			}
+			System.out.println("Informe a coordenada X: ");
+			x = sc.nextInt();
+			System.out.println("Informe a coordenada Y: ");
+			y = sc.nextInt();
+			//x = sc.nextInt();
+			//y = sc.nextInt();
+		}
+		System.out.println("Origem");
 		
-		if (num % 2 == 0) {
-			System.out.println("PAR");
-		}
-		else {
-			System.out.println("IMPAR");
-		}
 		sc.close();
 	}
-
 }
+
